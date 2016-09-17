@@ -1,0 +1,6 @@
+framework module Pods_CLabsImageSlider_Tests {
+  umbrella header "Pods-CLabsImageSlider_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

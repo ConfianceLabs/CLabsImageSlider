@@ -1,0 +1,6 @@
+framework module CLabsImageSlider {
+  umbrella header "CLabsImageSlider-umbrella.h"
+
+  export *
+  module * { export * }
+}

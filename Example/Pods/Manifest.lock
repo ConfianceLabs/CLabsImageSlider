@@ -1,0 +1,16 @@
+PODS:
+  - CLabsImageSlider (0.1.0)
+
+DEPENDENCIES:
+  - CLabsImageSlider (from `../`)
+
+EXTERNAL SOURCES:
+  CLabsImageSlider:
+    :path: ../
+
+SPEC CHECKSUMS:
+  CLabsImageSlider: c7add7deaef4b0e755d0e5f11499cf92554d7c4d
+
+PODFILE CHECKSUM: 8699cf2640d334154cf444f0ec300246c7455132
+
+COCOAPODS: 1.0.0
