@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CLabsImageSlider_Example' do
+  pod 'CLabsImageSlider', :path => '../'
+
+  target 'CLabsImageSlider_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
