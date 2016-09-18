@@ -14,6 +14,12 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+Swift 2.2
+
+## Summary
+
+CLabsImageSlider is a image slider written in swift language ,instead of implementing complex logics now you can create image slider with a single line of code. CLabsImageSlider loads local or remote images with multiple options like manual or auto slide etc. So save your time in writing code for page control by using CLabsImageSlider.
+
 ## Installation
 
 CLabsImageSlider is available through [CocoaPods](http://cocoapods.org). To install
