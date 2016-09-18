@@ -5,6 +5,9 @@
 [![License](https://img.shields.io/cocoapods/l/CLabsImageSlider.svg?style=flat)](http://cocoapods.org/pods/CLabsImageSlider)
 [![Platform](https://img.shields.io/cocoapods/p/CLabsImageSlider.svg?style=flat)](http://cocoapods.org/pods/CLabsImageSlider)
 
+
+![Alt text](https://s26.postimg.org/igwgu4wah/giphy.gif) 
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
