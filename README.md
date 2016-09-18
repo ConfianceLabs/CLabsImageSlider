@@ -29,6 +29,77 @@ it, simply add the following line to your Podfile:
 pod "CLabsImageSlider"
 ```
 
+## Step 1
+
+ From identity inspector replace UIView class of your UIView with CLabsImageSlider class in your xib or StoryBoard.
+
+## Step 2
+
+Create its Outlet.  
+
+```swift
+  @IBOutlet weak var imgSlider: CLabsImageSlider!
+```
+
+## Step 3 To show slider Images from Url
+
+From viewDidLayoutSubviews function call "SetUpView" function of CLabsImageSlider
+
+```swift
+
+let urlImages =    ["https://s26.postimg.org/3n85yisu1/one_5_51_58_PM.png","https://s26.postimg.org/65tuz7ek9/two_5_41_53_PM.png","https://s26.postimg.org/7ywrnizqx/three_5_41_53_PM.png","https://s26.postimg.org/6l54s80hl/four.png","https://s26.postimg.org/ioagfsbjt/five.png"]
+
+override func viewDidLayoutSubviews() {
+
+imgSlider.setUpView(.Url(imageArray:urlImages,placeHolderImage:UIImage(named:"placeHolder")),slideType:.ManualSwipe,isArrowBtnEnabled: true)
+ 
+    }
+```
+
+
+## To Show Local Images
+
+```swift
+ let localImages =   ["one.jpg","two.jpg","three.jpg","four.jpg","five.jpg","six.jpg"]
+ 
+  override func viewDidLayoutSubviews() {
+  
+     imgSlider.setUpView(.Local(imageArray: localImages),slideType: .ManualSwipe,isArrowBtnEnabled: true)
+  
+    }
+ 
+```
+## Optional Step
+
+- Apply imageSliderDelegate
+
+```swift
+class ViewController: UIViewController,imageSliderDelegate
+
+override func viewDidLoad() {
+        super.viewDidLoad()
+        
+     imgSlider.sliderDelegate   =   self
+    
+    
+    }
+
+```
+
+- Use its Delegate function
+
+```swift
+ func didMovedToIndex(index:Int)
+    {
+        print("did moved at Index : ",index)
+    }
+```
+
+# YouTube Link   
+
+https://www.youtube.com/channel/UCwYjZ3vXQYhJaRwUm6u9-bA
+ 
+
 ## Author
 
 ConfianceLabs, confiancelabs@gmail.com
