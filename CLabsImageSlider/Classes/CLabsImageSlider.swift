@@ -40,46 +40,46 @@ public class CLabsImageSlider:UIView,updateUI
 
     
     
-    private var imageSourceArray    =   [imageData]()
-    private var isAnimating =   false
-    private var isGestureEnabled    =   Bool()
-    private var visibleImageView    =   UIImageView()
-    private var imageView1  =   UIImageView()
-    private var imageView2  =   UIImageView()
-    private var imageView3  =   UIImageView()
-    private var currentIndex    =   Int()
-    private var placeHolderImage    =   UIImage?()
-    private var isLocalImage =  Bool()
+     var imageSourceArray    =   [imageData]()
+     var isAnimating =   false
+     var isGestureEnabled    =   Bool()
+     var visibleImageView    =   UIImageView()
+     var imageView1  =   UIImageView()
+     var imageView2  =   UIImageView()
+     var imageView3  =   UIImageView()
+     var currentIndex    =   Int()
+     var placeHolderImage    =   UIImage?()
+     var isLocalImage =  Bool()
     
    
     public weak var sliderDelegate  =   imageSliderDelegate?()
     
    
     
-    private  var rightFrame  :CGRect
+      var rightFrame  :CGRect
     {
         return CGRectMake(self.frame.size.width, 0, self.frame.size.width, self.frame.size.height)
     }
     
-    private var midFrame    :   CGRect
+     var midFrame    :   CGRect
     {
         return CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)
     }
     
-    private var leftFrame   :   CGRect
+     var leftFrame   :   CGRect
     {
         return CGRectMake(-self.frame.size.width,0, self.frame.size.width, self.frame.size.height)
     }
     
     
-    private var leftSwipe : UISwipeGestureRecognizer
+     var leftSwipe : UISwipeGestureRecognizer
     {
         let leftSwipe   =   UISwipeGestureRecognizer(target: self, action: #selector(CLabsImageSlider.swipeRight(_:)))
         leftSwipe.direction =   .Left
         return leftSwipe
     }
     
-    private var rightSwipe : UISwipeGestureRecognizer
+     var rightSwipe : UISwipeGestureRecognizer
     {
         
         return UISwipeGestureRecognizer(target: self, action: #selector(CLabsImageSlider.swipeLeft(_:)))
@@ -181,7 +181,7 @@ public class CLabsImageSlider:UIView,updateUI
     }
 
     
-   @objc private func moveRight()
+   @objc  func moveRight()
     {
         if !isAnimating{
             currentIndex    =   currentIndex    +   1
@@ -195,7 +195,7 @@ public class CLabsImageSlider:UIView,updateUI
     }
     
     
-   @objc private func moveLeft()
+   @objc  func moveLeft()
     {
         if !isAnimating{
             currentIndex    =   currentIndex    -   1
@@ -211,7 +211,7 @@ public class CLabsImageSlider:UIView,updateUI
     
     
     
-    @objc private func swipeLeft(swipeGesture:UISwipeGestureRecognizer)
+    @objc  func swipeLeft(swipeGesture:UISwipeGestureRecognizer)
     {
         moveLeft()
     }
@@ -219,7 +219,7 @@ public class CLabsImageSlider:UIView,updateUI
     
     
     
-    private func swipeLeftAnimate(condition:Int)
+     func swipeLeftAnimate(condition:Int)
     {
         isAnimating=true
         switch condition {
@@ -286,14 +286,14 @@ public class CLabsImageSlider:UIView,updateUI
     
     
     
-   @objc private func swipeRight(swipeGesture:UISwipeGestureRecognizer)
+   @objc  func swipeRight(swipeGesture:UISwipeGestureRecognizer)
     {
         moveRight()
     }
     
     
     
-    private func swipeRightAnimate(condition:Int){
+     func swipeRightAnimate(condition:Int){
         isAnimating=true
         switch condition {
         case 1:
@@ -357,7 +357,7 @@ public class CLabsImageSlider:UIView,updateUI
 
     
     
-    private func prepareImageSource(images:[String]){
+     func prepareImageSource(images:[String]){
         
         for i in 0..<images.count
         {
@@ -371,7 +371,7 @@ public class CLabsImageSlider:UIView,updateUI
         
     }
     
-    private func startImageDownload(index:Int)
+     func startImageDownload(index:Int)
     {
         
         if !imageSourceArray[index].isLoaded
@@ -401,7 +401,7 @@ public class CLabsImageSlider:UIView,updateUI
         
     }
     
-    private func getImage(index:Int) -> UIImage?
+     func getImage(index:Int) -> UIImage?
     {
         
         if isLocalImage{
@@ -423,7 +423,7 @@ public class CLabsImageSlider:UIView,updateUI
     }
 
     
-   private func enableArrows()
+    func enableArrows()
     {
         let shape   =  CAShapeLayer()
         let path    =   UIBezierPath()
