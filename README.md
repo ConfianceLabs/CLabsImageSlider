@@ -32,6 +32,9 @@ pod "CLabsImageSlider"
 ## Step 1
 
  From identity inspector replace UIView class of your UIView with CLabsImageSlider class in your xib or StoryBoard.
+ 
+ ![Alt text](https://i.imgsafe.org/ef93ebcb63.png) 
+ 
 
 ## Step 2
 
