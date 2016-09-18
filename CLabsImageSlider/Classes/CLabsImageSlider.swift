@@ -505,7 +505,7 @@ public class imageData {
     var isLoaded    =   Bool()
     var imageUrl    :   String
     var isloading   =   Bool()
-    weak var delegate    =   updateUI?()
+    public weak var delegate    =   updateUI?()
     
     
     
