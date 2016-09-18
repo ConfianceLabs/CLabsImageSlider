@@ -9,7 +9,7 @@
 import UIKit
 
 
-@objc protocol imageSliderDelegate {
+@objc public protocol imageSliderDelegate {
     
     func didMovedToIndex(index:Int)
     
@@ -17,22 +17,22 @@ import UIKit
 }
 
 
-protocol updateUI {
+@objc public protocol updateUI {
     func imageUpdate(index:Int)
 }
 
 
 
-class CLabsImageSlider:UIView,updateUI
+public class CLabsImageSlider:UIView,updateUI
 {
     
-    enum imageSrc
+    public enum imageSrc
     {
         case Url(imageArray:[String],placeHolderImage:UIImage?)
         case Local(imageArray:[String])
     }
     
-    enum slideCase
+    public enum slideCase
     {
         case ManualSwipe
         case Automatic(timeIntervalinSeconds:Double)
@@ -51,7 +51,7 @@ class CLabsImageSlider:UIView,updateUI
     private var placeHolderImage    =   UIImage?()
     private var isLocalImage =  Bool()
     
-    public weak var sliderDelegate  :   imageSliderDelegate?
+    public weak var sliderDelegate  =   imageSliderDelegate?()
     
    
     
@@ -85,7 +85,7 @@ class CLabsImageSlider:UIView,updateUI
     }
 
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         
@@ -100,8 +100,17 @@ class CLabsImageSlider:UIView,updateUI
     
     
    
-    
-    func setUpView(imageSource:imageSrc,slideType:slideCase,isArrowBtnEnabled:Bool)
+    /**
+    This function set up the image slider for you just pass few required parameters to it
+     - returns: Nothing
+     - parameter imageSource: to show images from url use -> .Url(imageArray [String],placeHolderImage:UIImage?) and provide url array and placeholder image in paranthesis , to show local images use -> .Local(imageArray:[String]) and provide local image names array in paranthesis
+     
+     - parameter slideType: to  slide images automatically use -> .Automatic(timeIntervalinSeconds:Double) and provide time interval(Seconds) in parantheseis , to swipe and slide images manually simply use -> .ManualSwipe
+     
+      - parameter isArrowBtnEnabled:Bool to show arrows to slide images backward and forward pass true else false
+     Throws : nothing
+     */
+   public func setUpView(imageSource:imageSrc,slideType:slideCase,isArrowBtnEnabled:Bool)
     {
         switch imageSource{
         case .Local(let images):
@@ -381,7 +390,7 @@ class CLabsImageSlider:UIView,updateUI
     }
     
     
-    func imageUpdate(index:Int)
+    public func imageUpdate(index:Int)
     {
         
         if index    ==  currentIndex
@@ -488,14 +497,14 @@ class CLabsImageSlider:UIView,updateUI
 
 
 
-class imageData {
+public class imageData {
     
     var image   =   UIImage?()
     var index   :   Int
     var isLoaded    =   Bool()
     var imageUrl    :   String
     var isloading   =   Bool()
-    var delegate    =   updateUI?()
+    weak var delegate    =   updateUI?()
     
     
     
