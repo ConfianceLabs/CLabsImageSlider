@@ -51,6 +51,7 @@ public class CLabsImageSlider:UIView,updateUI
     private var placeHolderImage    =   UIImage?()
     private var isLocalImage =  Bool()
     
+   
     public weak var sliderDelegate  =   imageSliderDelegate?()
     
    
@@ -516,7 +517,7 @@ public class imageData {
     
     
    
-    func downloadImage()
+    public func downloadImage()
     {
         
         if !isloading{
