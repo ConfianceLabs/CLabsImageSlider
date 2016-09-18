@@ -1,18 +1,18 @@
 {
   "name": "CLabsImageSlider",
   "version": "0.1.0",
-  "summary": "A short description of CLabsImageSlider.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/CLabsImageSlider",
+  "summary": "CLabsImageSlider is a image slider written in swift language.",
+  "description": "CLabsImageSlider is a image slider written in swift language ,instead of implementing complex logics now you can create image slider with a single line of code. CLabsImageSlider loads local or remote images with multiple options like manual or auto slide etc. So save your time in writing code for page control by using CLabsImageSlider.",
+  "homepage": "https://github.com/ConfianceLabs/CLabsImageSlider.git",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "ConfianceLabs": "confiancelabs@gmail.com"
+    "Dewanshu Sharma": "confiancelabs@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/CLabsImageSlider.git",
+    "git": "https://github.com/ConfianceLabs/CLabsImageSlider.git",
     "tag": "0.1.0"
   },
   "platforms": {
