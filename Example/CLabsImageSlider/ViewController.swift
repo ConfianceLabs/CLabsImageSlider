@@ -36,7 +36,7 @@ class ViewController: UIViewController,imageSliderDelegate {
         
         
     
-        imgSlider.setUpView(.Url(imageArray:urlImages,placeHolderImage:UIImage(named:"placeHolder")),slideType:.ManualSwipe,isArrowBtnEnabled: true)
+        imgSlider.setUpView(imageSource: .Url(imageArray:urlImages,placeHolderImage:UIImage(named:"placeHolder")),slideType:.ManualSwipe,isArrowBtnEnabled: true)
         
        // imgSlider.setUpView(.Local(imageArray: localImages),slideType: .ManualSwipe,isArrowBtnEnabled: true)
         
