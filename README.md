@@ -14,7 +14,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-Swift 2.2
+Swift 3.0
 
 ## Summary
 
@@ -54,7 +54,7 @@ let urlImages =    ["https://s26.postimg.org/3n85yisu1/one_5_51_58_PM.png","http
 
 override func viewDidLayoutSubviews() {
 
-imgSlider.setUpView(.Url(imageArray:urlImages,placeHolderImage:UIImage(named:"placeHolder")),slideType:.ManualSwipe,isArrowBtnEnabled: true)
+imgSlider.setUpView(imageSource: .Url(imageArray:urlImages,placeHolderImage:UIImage(named:"placeHolder")),slideType:.ManualSwipe,isArrowBtnEnabled: true)
  
     }
 ```
@@ -67,7 +67,7 @@ imgSlider.setUpView(.Url(imageArray:urlImages,placeHolderImage:UIImage(named:"pl
  
   override func viewDidLayoutSubviews() {
   
-     imgSlider.setUpView(.Local(imageArray: localImages),slideType: .ManualSwipe,isArrowBtnEnabled: true)
+     imgSlider.setUpView(imageSource: .Local(imageArray: localImages),slideType: .ManualSwipe,isArrowBtnEnabled: true)
   
     }
  
