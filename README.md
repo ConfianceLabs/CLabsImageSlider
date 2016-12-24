@@ -29,6 +29,12 @@ it, simply add the following line to your Podfile:
 pod "CLabsImageSlider", '~> 0.1.2'
 ```
 
+## Note :- 
+pod "CLabsImageSlider", '~> 0.1.2' supports Swift 3.0 
+pod "CLabsImageSlider", '~> 0.1.1' supports Swift 2.2
+before executing pod install please verify your pods are updated or execute 
+pod repo update command. 
+
 ## Step 1
 
  From identity inspector replace UIView class of your UIView with CLabsImageSlider class in your xib or StoryBoard.
